@@ -1,0 +1,8 @@
+.menu__items {
+	display: flex;
+	justify-content: space-between;
+	background-color: aqua;
+}
+.menu__items__right {
+	background-color: red;
+}
