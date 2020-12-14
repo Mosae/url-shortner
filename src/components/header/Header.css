@@ -1,0 +1,14 @@
+.header__intro {
+	width: 60%;
+	margin-left: 3%;
+}
+.header__intro > h1 {
+	font-size: 68px;
+}
+.header__intro > button {
+	background-color: #2bcdc5;
+	width: 170px;
+	height: 50px;
+	border-radius: 20%;
+	color: white;
+}
