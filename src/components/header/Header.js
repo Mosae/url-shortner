@@ -5,16 +5,22 @@ import illustration from './illustration-working.svg';
 function Header() {
 	return (
 		<div className="header__intro">
-			<h1>
-				More than just <br />
-				shorter links
-			</h1>
-			<h2>
-				Build your brand's recoginition and get detailed <br />
-				insights on how your links are performing.
-			</h2>
-			<Button>Get Started</Button>
-			<img src={illustration} alt="Shortly" />
+			<div className="header__info">
+				<h1>
+					More than just <br />
+					shorter links
+				</h1>
+				<h2>
+					Build your brand's recoginition and get detailed <br />
+					insights on how your links are performing.
+				</h2>
+				<Button variant="contained" color="primary">
+					Get Started
+				</Button>
+			</div>
+			<div className="header__image">
+				<img src={illustration} alt="Shortly" />
+			</div>
 		</div>
 	);
 }
