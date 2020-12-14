@@ -1,0 +1,19 @@
+.search__container {
+	display: flex;
+	align-items: center;
+
+	margin: 20px 70px 20px 20px;
+	justify-content: space-evenly;
+}
+.search__container > button {
+	background-color: aqua;
+	border-radius: 15px;
+	margin: 10px;
+	width: 190px;
+}
+.search__container > input {
+	margin-left: 50px;
+	width: 50%;
+	height: 30px;
+	border-radius: 3rem;
+}
