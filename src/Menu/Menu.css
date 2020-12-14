@@ -1,8 +1,62 @@
-.menu__items {
+/* .menu__items {
 	display: flex;
 	justify-content: space-between;
-	background-color: aqua;
+} */
+/* * {
+	box-sizing: border-box;
 }
-.menu__items__right {
-	background-color: red;
+body {
+	margin: 0;
+}
+
+.header {
+	display: flex;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 3em 1.5em;
+	/* align-items: center; */
+/* position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: aqua;
+} */
+/* .header__logo {
+	width: 100px;
+	margin: 0 20px;
+	margin-top: 10px;
+	object-fit: contain;
+}
+.header__nav {
+	display: flex;
+	margin: 0;
+	padding: 0;
+
+	justify-content: space-evenly;
+}
+.header__login {
+} */
+
+.header__ul {
+	display: flex;
+	width: 70%;
+	justify-content: space-between;
+	margin: 0 10px;
+	padding: 0;
+}
+.header__nav {
+	margin-right: 15%;
+	display: flex;
+	align-items: center;
+}
+.header__login {
+	margin-left: auto;
+	width: 20%;
+}
+.menu__items {
+	/* padding: 3px; */
+	/* max-width: 1200px; */
+	/* width: 100%; */
+	/* margin: 0 auto; */
+	padding: 0 2em 0em;
 }
