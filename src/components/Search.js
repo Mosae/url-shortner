@@ -20,7 +20,11 @@ function Search() {
 	}, []);
 	return (
 		<div className="search__container">
-			<input className="search__input" type="text" />
+			<input
+				placeholder="Shorten a link here..."
+				className="search__input"
+				type="text"
+			/>
 			<Button>Shorten URL</Button>
 		</div>
 	);
