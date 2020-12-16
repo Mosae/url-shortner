@@ -3,10 +3,17 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import './Search.css';
 function Search() {
+	//tack user input
 	const [input, setInput] = useState([]);
+	//show links from API - array because response from api call returns multiple short URLs
+	const [showLinks, setShowLinks] = useState([]);
+	//store out API
+	const API__URL = 'https://api.shrtco.de/v2/shorten?url=';
+	//handleChanger function
+
 	useEffect(() => {
 		axios
-			.get('https://api.shrtco.de/v2/shorten?url=google.com')
+			.get(`${API__URL}`)
 			.then((response) => {
 				setInput(response.data);
 				// console.log(
@@ -18,10 +25,17 @@ function Search() {
 				console.log('There was a problem getting the data', error);
 			});
 	}, []);
+
 	return (
 		<div className="search__container">
-			<input className="search__input" type="text" />
-			<Button>Shorten URL</Button>
+			<input
+				placeholder="Shorten a link here..."
+				className="search__input"
+				type="text"
+				onChange={handleChange}
+				value={url}
+			/>
+			<Button type="submit">Shorten URL</Button>
 		</div>
 	);
 }
