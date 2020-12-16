@@ -3,13 +3,16 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import './Search.css';
 function Search() {
+	const [input, setInput] = useState([]);
 	useEffect(() => {
 		axios
-			.get(
-				'https://api.shrtco.de/v2/shorten?url=google.com/very/long/link.html'
-			)
+			.get('https://api.shrtco.de/v2/shorten?url=google.com')
 			.then((response) => {
-				console.log('This is the response', response.data);
+				setInput(response.data);
+				// console.log(
+				// 	'This is the response',
+				// 	response.data.result.full_short_link
+				// );
 			})
 			.catch((error) => {
 				console.log('There was a problem getting the data', error);
