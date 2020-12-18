@@ -4,18 +4,22 @@ import Button from '@material-ui/core/Button';
 import './Search.css';
 function Search() {
 	//tack user input
-	const [input, setInput] = useState([]);
+	const [inputURL, setInputURL] = useState('');
 	//show links from API - array because response from api call returns multiple short URLs
 	const [showLinks, setShowLinks] = useState([]);
 	//store out API
 	const API__URL = 'https://api.shrtco.de/v2/shorten?url=';
-	//handleChanger function
+	//handleChanger function - handles events
+	const handleChange = (e) => {
+		setInputURL(e.target.value);
+	};
 
+	//need to handle what happens when a user submits
 	useEffect(() => {
 		axios
 			.get(`${API__URL}`)
 			.then((response) => {
-				setInput(response.data);
+				setInputURL(response.data);
 				// console.log(
 				// 	'This is the response',
 				// 	response.data.result.full_short_link
@@ -33,7 +37,7 @@ function Search() {
 				className="search__input"
 				type="text"
 				onChange={handleChange}
-				value={url}
+				value=""
 			/>
 			<Button type="submit">Shorten URL</Button>
 		</div>
