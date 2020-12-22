@@ -18,4 +18,10 @@
 .header__info {
 	display: flex;
 	flex-direction: column;
+	background-color: blue;
+}
+.header__image {
+	width: 45%;
+	/* max-width: 30px; */
+	/* margin-left: 35px; */
 }
