@@ -14,7 +14,10 @@ function Header() {
 					Build your brand's recoginition and get detailed <br />
 					insights on how your links are performing.
 				</h2>
-				<Button variant="contained" color="primary">
+				<Button
+					variant="contained"
+					color="primary"
+					className="get__started__button">
 					Get Started
 				</Button>
 			</div>
