@@ -1,6 +1,7 @@
 .header__intro {
 	display: flex;
 	margin: 2% 5% 2% 5%;
+	justify-content: space-between;
 	/* max-width: 1500px; */
 	/* margin-left: auto; */
 	/* margin-right: auto; */
@@ -10,18 +11,18 @@
 }
 .header__intro > button {
 	background-color: #2bcdc5;
-	/* width: 50px;
-	height: 50px;
-	border-radius: 20%; */
 	color: white;
 }
 .header__info {
 	display: flex;
 	flex-direction: column;
-	background-color: blue;
 }
 .header__image {
 	width: 45%;
-	/* max-width: 30px; */
-	/* margin-left: 35px; */
+}
+.get__started__button {
+	background-color: aqua !important;
+	border-radius: 30px !important;
+	margin: 10px;
+	width: 190px;
 }
