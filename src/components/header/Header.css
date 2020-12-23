@@ -22,7 +22,7 @@
 }
 .get__started__button {
 	background-color: aqua !important;
-	border-radius: 30px !important;
+	border-radius: 50px !important;
 	margin: 10px;
-	width: 190px;
+	width: 150px;
 }

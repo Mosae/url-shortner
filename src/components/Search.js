@@ -39,7 +39,9 @@ function Search() {
 				onChange={handleChange}
 				value=""
 			/>
-			<Button type="submit">Shorten URL</Button>
+			<Button variant="contained" color="primary" type="submit">
+				Shorten URL
+			</Button>
 		</div>
 	);
 }
