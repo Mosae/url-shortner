@@ -6,10 +6,10 @@
 	justify-content: space-evenly;
 }
 .search__container > button {
-	background-color: aqua;
-	border-radius: 15px;
+	background-color: aqua !important;
+	border-radius: 50px !important;
 	margin: 10px;
-	width: 190px;
+	width: 150px;
 }
 .search__container > input {
 	margin-left: 50px;
