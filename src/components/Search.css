@@ -1,9 +1,8 @@
 .search__container {
 	display: flex;
 	align-items: center;
-
 	margin: 20px 70px 20px 20px;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 .search__container > button {
 	background-color: aqua !important;
