@@ -1,48 +1,86 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Button from '@material-ui/core/Button';
+import shortenMobile from '../images/bg-shorten-mobile.svg';
+import shortenDesktop from '../images/bg-shorten-desktop.svg';
 import './Search.css';
 function Search() {
 	//tack user input
-	const [inputURL, setInputURL] = useState('');
+	const [currentLink, setCurrentLink] = useState('');
 	//show links from API - array because response from api call returns multiple short URLs
-	const [showLinks, setShowLinks] = useState([]);
+	const [links, setLinks] = useState([]);
+	const [error, setError] = useState(false);
 	//store out API
-	const API__URL = 'https://api.shrtco.de/v2/shorten?url=';
-	//handleChanger function - handles events
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		fetch(`https://api.shrtco.de/v2/shorten?url=${currentLink}`)
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.ok) {
+					setLinks([
+						...links,
+						{ link: currentLink, shortLink: data.result['full_short_link2'] },
+					]);
+					console.log(links);
+					setCurrentLink('');
+				} else {
+					console.log('error getting the data');
+					setError(true);
+				}
+			})
+			.catch(() => {
+				console.log('error getting the info');
+				setError(true);
+			});
+	};
 	const handleChange = (e) => {
-		setInputURL(e.target.value);
+		setCurrentLink(e.target.value);
 	};
 
-	//need to handle what happens when a user submits
-	useEffect(() => {
-		axios
-			.get(`${API__URL}`)
-			.then((response) => {
-				setInputURL(response.data);
-				// console.log(
-				// 	'This is the response',
-				// 	response.data.result.full_short_link
-				// );
-			})
-			.catch((error) => {
-				console.log('There was a problem getting the data', error);
-			});
-	}, []);
-
 	return (
-		<div className="search__container">
-			<input
-				placeholder="Shorten a link here..."
-				className="search__input"
-				type="text"
-				onChange={handleChange}
-				value=""
-			/>
-			<Button variant="contained" color="primary" type="submit">
-				Shorten URL
-			</Button>
-		</div>
+		<section className="shorten">
+			<div className="search__container">
+				<form
+					action=""
+					onSubmit={handleSubmit}
+					className={error ? 'error' : ''}>
+					{/* <img
+						src={shortenMobile}
+						alt="background Image"
+						className="shorten-mobile-BG"
+						aria-hidden="true"
+					/>
+					<img
+						src={shortenDesktop}
+						alt="background Image"
+						className="shorten-desktop-BG"
+						aria-hidden="true"
+					/> */}
+					<div className="userInput">
+						<input
+							type="text"
+							placeholder="Shorten a link here..."
+							value={currentLink}
+							onChange={handleChange}
+						/>
+						<p className="error">Please add a link</p>
+					</div>
+					<input type="submit" className="secondary-btn" value="Shorten" />
+				</form>
+				{links &&
+					links.map((link, i) => (
+						<div className="return__Result" key={i}>
+							<h3 className="result__h3">{link['link']}</h3>
+							<div className="">
+								<a href={link['shortLink']} className="result_url">
+									{link['shortLink']}
+								</a>
+								<button className="secondary-btn">Copy</button>
+							</div>
+						</div>
+					))}
+			</div>
+		</section>
 	);
 }
 
