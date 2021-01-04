@@ -16,3 +16,23 @@
 	height: 30px;
 	border-radius: 3rem;
 }
+.shorten_it_button {
+	background-color: aqua !important;
+	border-radius: 50px !important;
+	margin: 10px;
+	width: 150px;
+	color: white !important;
+}
+/* .shorten__input > input {
+	align-items: center;
+	flex-direction: row;
+	background-color: aqua;
+	width: 150px;
+} */
+.shorten__input {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+	width: auto;
+}
