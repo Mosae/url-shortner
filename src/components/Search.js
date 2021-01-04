@@ -56,7 +56,7 @@ function Search() {
 						className="shorten-desktop-BG"
 						aria-hidden="true"
 					/> */}
-					<div className="userInput">
+					<div className="shorten__input">
 						<input
 							type="text"
 							placeholder="Shorten a link here..."
@@ -65,7 +65,9 @@ function Search() {
 						/>
 						<p className="error">Please add a link</p>
 					</div>
-					<input type="submit" className="secondary-btn" value="Shorten" />
+					<Button type="submit" className="shorten_it_button">
+						Shorten It!
+					</Button>
 				</form>
 				{links &&
 					links.map((link, i) => (
@@ -75,7 +77,7 @@ function Search() {
 								<a href={link['shortLink']} className="result_url">
 									{link['shortLink']}
 								</a>
-								<button className="secondary-btn">Copy</button>
+								<button className="primary-btn">Copy</button>
 							</div>
 						</div>
 					))}
