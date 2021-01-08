@@ -7,7 +7,6 @@ function Footer() {
 				<h2>Shortly</h2>
 			</div>
 			<nav className="footer__subheading">
-				<p>nvbcidbn</p>
 				<h6>Features</h6>
 				<h6>Resources</h6>
 				<h6>Company</h6>
