@@ -63,7 +63,7 @@ function Search() {
 							value={currentLink}
 							onChange={handleChange}
 						/>
-						<p className="error">Please add a link here</p>
+						{/* <p className="error">Please add a link here</p> */}
 					</div>
 					<Button type="submit" className="shorten_it_button">
 						Shorten It!
