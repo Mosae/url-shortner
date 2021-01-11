@@ -1,21 +1,30 @@
 .search__container {
 	display: flex;
 	align-items: center;
-	background-color: salmon;
-	margin: 20px 70px 20px 20px;
+	margin: 2% 5% 2% 5%;
 	justify-content: space-between;
+}
+form {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+p {
+	margin: 5%;
+	background-color: aqua;
 }
 .search__container > button {
 	background-color: aqua !important;
 	border-radius: 50px !important;
 	margin: 10px;
-	width: 150px;
+	/* width: 150px; */
 }
 .search__container > input {
 	margin-left: 50px;
-	width: 50%;
+	/* width: 50%; */
 	height: 30px;
 	border-radius: 3rem;
+	color: aqua;
 }
 .shorten_it_button {
 	background-color: aqua !important;
@@ -32,6 +41,6 @@
 } */
 .shorten__input {
 	display: flex;
-
+	max-width: 100%;
 	/* justify-content: space-around; */
 }
