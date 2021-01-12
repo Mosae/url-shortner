@@ -15,35 +15,25 @@ p {
 }
 input {
 	width: 800px;
+	height: 40px;
 }
 .search__container > button {
 	background-color: aqua !important;
 	border-radius: 50px !important;
 	margin: 10px;
-	/* width: 150px; */
-}
-.search__container > input {
-	margin-left: 50px;
-	/* width: 50%; */
-	height: 30px;
-	border-radius: 3rem;
-	color: aqua;
 }
 .shorten_it_button {
 	background-color: aqua !important;
 	border-radius: 50px !important;
-	margin: 10px;
+	margin: 20px;
 	width: 150px;
 	color: white !important;
 }
-/* .shorten__input > input {
-	align-items: center;
-	flex-direction: row;
-	background-color: aqua;
-	width: 150px;
-} */
 .shorten__input {
 	display: flex;
 	max-width: 100%;
-	/* justify-content: space-around; */
+}
+.return__result {
+	display: flex;
+	flex-direction: column;
 }
