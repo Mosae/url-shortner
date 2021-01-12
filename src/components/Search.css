@@ -33,7 +33,13 @@ input {
 	display: flex;
 	max-width: 100%;
 }
-.return__result {
-	display: flex;
-	flex-direction: column;
+.return__link {
+	background-color: antiquewhite;
+	position: relative;
+}
+Button {
+	background-color: aqua !important;
+	border-radius: 50px !important;
+	margin: 10px;
+	width: 150px;
 }
