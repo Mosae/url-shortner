@@ -24,7 +24,7 @@ function Search() {
 					console.log(links);
 					setCurrentLink('');
 				} else {
-					console.log('error getting the data');
+					alert('Please enter a valid URL');
 					setError(true);
 				}
 			})
@@ -69,18 +69,20 @@ function Search() {
 						Shorten It!
 					</Button>
 				</form>
-				{links &&
-					links.map((link, i) => (
-						<div className="return__Result" key={i}>
-							<h3 className="result__h3">{link['link']}</h3>
-							<div className="">
-								<a href={link['shortLink']} className="result_url">
-									{link['shortLink']}
-								</a>
-								<button className="primary-btn">Copy</button>
+				<div className="return__link">
+					{links &&
+						links.map((link, i) => (
+							<div className="return__result" key={i}>
+								<h3 className="result__h3">{link['link']}</h3>
+								<div className="">
+									<a href={link['shortLink']} className="result_url">
+										{link['shortLink']}
+									</a>
+									<Button className="primary-btn">Copy</Button>
+								</div>
 							</div>
-						</div>
-					))}
+						))}
+				</div>
 			</div>
 		</section>
 	);
