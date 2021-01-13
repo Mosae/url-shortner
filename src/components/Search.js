@@ -24,7 +24,7 @@ function Search() {
 					console.log(links);
 					setCurrentLink('');
 				} else {
-					alert('Please enter a valid URL');
+					//alert('Please enter a valid URL');
 					setError(true);
 				}
 			})
@@ -51,12 +51,12 @@ function Search() {
 						className="shorten-mobile-BG"
 						aria-hidden="true"
 					/> */}
-					{/* <img
+					<img
 						src={shortenDesktop}
 						alt="background"
 						className="shorten-desktop-BG"
 						aria-hidden="true"
-					/> */}
+					/>
 					<div className="shorten__input">
 						<input
 							type="text"
@@ -70,7 +70,7 @@ function Search() {
 					<input
 						type="submit"
 						className="secondary_it_button"
-						value="Shorten It"
+						value="Shorten It!"
 					/>
 				</form>
 				{links && links.map((link, i) => <Result link={link} id={i} />)}
