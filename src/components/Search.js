@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import shortenMobile from '../images/bg-shorten-mobile.svg';
 import shortenDesktop from '../images/bg-shorten-desktop.svg';
-// import './_search.scss';
+import './_search.scss';
 function Search() {
 	//tack user input
 	const [currentLink, setCurrentLink] = useState('');
@@ -9,6 +9,7 @@ function Search() {
 	const [links, setLinks] = useState([]);
 	const [error, setError] = useState(false);
 	//store out API
+	const [clicked, setClick] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -37,26 +38,26 @@ function Search() {
 	};
 
 	return (
-		<section className="shorten_it">
-			<div className="container">
+		<section className="shorten">
+			<div className="search__container">
 				<form
 					action=""
 					onSubmit={handleSubmit}
 					className={error ? 'error' : ''}
 					onFocus={() => setError(false)}>
-					<img
+					{/* <img
 						src={shortenMobile}
 						alt="background"
 						className="shorten-mobile-BG"
 						aria-hidden="true"
-					/>
-					<img
+					/> */}
+					{/* <img
 						src={shortenDesktop}
 						alt="background"
 						className="shorten-desktop-BG"
 						aria-hidden="true"
-					/>
-					<div className="input">
+					/> */}
+					<div className="shorten__input">
 						<input
 							type="text"
 							placeholder="Shorten a link here..."
@@ -66,7 +67,11 @@ function Search() {
 						/>
 						<p className="error-message">Please add a link</p>
 					</div>
-					<input type="submit" className="secondary-btn" value="Shorten It" />
+					<input
+						type="submit"
+						className="secondary_it_button"
+						value="Shorten It"
+					/>
 				</form>
 				{links && links.map((link, i) => <Result link={link} id={i} />)}
 			</div>
@@ -74,16 +79,15 @@ function Search() {
 	);
 }
 
-export default Search;
-
 const Result = ({ link, i }) => {
 	function copyToClipboard(e) {
 		navigator.clipboard.writeText(link['shortLink']);
 		e.target.focus();
 	}
+
 	return (
-		<div className="result" key={i}>
-			<h3 className="result__heading tp">{link['link']}</h3>
+		<div className="return_result" key={i}>
+			<h3 className="result__heading">{link['link']}</h3>
 			<div className="">
 				<a href={link['shortLink']} className="result__url">
 					{link['shortLink']}
@@ -96,3 +100,5 @@ const Result = ({ link, i }) => {
 		</div>
 	);
 };
+
+export default Search;
