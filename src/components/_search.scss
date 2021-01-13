@@ -1,44 +1,81 @@
-.search__container {
-	display: flex;
-	margin: 2% 5% 2% 5%;
-	justify-content: space-between;
-	flex-direction: column;
+.shorten {
+	background-color: lightgray;
+	$formHeight: 13px;
+	padding-bottom: 2rem;
+	form {
+		position: relative;
+		top: -$formHeight / 2;
+		display: flex;
+		justify-content: space-between;
+		// flex-direction: column;
+		gap: 2rem;
+		padding: 2rem;
+		background-color: hsl(257, 27%, 26%);
+		font-size: 1rem;
+		border-radius: 0.9rem;
+		input,
+		.shorten__input {
+			z-index: 2;
+			font-size: inherit;
+			border-radius: 0.3rem;
+			padding: 0.5rem;
+			width: 60%;
+		}
+		input[type='text'] {
+			border: none;
+			font-size: 700;
+			color: black;
+		}
+		input[type='text']::placeholder {
+			color: hsl(0, 0%, 75%);
+		}
+		input[type='submit'] {
+			width: 20%;
+			height: 3rem;
+			background-color: hsl(180, 66%, 49%);
+			color: white;
+			font-weight: 800;
+		}
+	}
+	.shorten__input {
+		input {
+			width: 100%;
+		}
+	}
+	p.error-message {
+		display: none;
+	}
+	form.error {
+		input[type='text'] {
+			border: 3px solid red;
+			color: red;
+		}
+		.input {
+			position: relative;
+		}
+		p.error-message {
+			position: absolute;
+			display: block;
+			color: red;
+			font-style: italic;
+			// left: 1rem;
+			// bottom: -1.5rem;
+			font-size: 0.8rem;
+		}
+	}
+	.shorten-desktop-BG {
+		display: none;
+	}
+	.shorten-mobile-BG {
+		top: 0px;
+		right: 0px;
+		position: absolute;
+		z-index: 1;
+	}
 }
-form {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-p {
-	margin: 5%;
-}
-input {
-	width: 800px;
-	height: 40px;
-}
-.search__container > button {
-	background-color: aqua !important;
-	border-radius: 50px !important;
-	margin: 10px;
-}
-.shorten_it_button {
-	background-color: aqua !important;
-	border-radius: 50px !important;
-	margin: 20px;
-	width: 150px;
-	color: white !important;
-}
-.shorten__input {
-	display: flex;
-	max-width: 100%;
-}
-Button {
-	background-color: aqua !important;
-	border-radius: 50px !important;
-	margin: 10px;
-	width: 150px;
-}
+
 .return_result {
+	background-color: hsl(180, 66%, 49%);
 	border-radius: 0.4rem;
 	text-align: left;
 	h3 {
