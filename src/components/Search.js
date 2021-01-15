@@ -83,7 +83,6 @@ const Result = ({ link, i }) => {
 		navigator.clipboard.writeText(link['shortLink']);
 		e.target.focus();
 	}
-
 	return (
 		<div className="return_result" key={i}>
 			<h3 className="result__heading">{link['link']}</h3>
@@ -91,7 +90,7 @@ const Result = ({ link, i }) => {
 				<a href={link['shortLink']} className="result__url">
 					{link['shortLink']}
 				</a>
-				<button className="secondary-btn" onClick={copyToClipboard}>
+				<button id="btn" className="secondary-btn" onClick={copyToClipboard}>
 					<span className="copy">Copy</span>
 					<span className="copied">Copied!</span>
 				</button>
