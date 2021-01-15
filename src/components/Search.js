@@ -9,7 +9,6 @@ function Search() {
 	const [links, setLinks] = useState([]);
 	const [error, setError] = useState(false);
 	//store out API
-	const [clicked, setClick] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -88,7 +87,7 @@ const Result = ({ link, i }) => {
 	return (
 		<div className="return_result" key={i}>
 			<h3 className="result__heading">{link['link']}</h3>
-			<div className="">
+			<div className="result">
 				<a href={link['shortLink']} className="result__url">
 					{link['shortLink']}
 				</a>
