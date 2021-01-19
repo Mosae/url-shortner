@@ -1,0 +1,81 @@
+.statistics {
+	padding: 6rem 0rem 8rem 0rem;
+	background: var(--very-light-gray);
+	.container {
+		display: grid;
+		grid-gap: 6rem;
+	}
+	.statistics__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.statistics__heading {
+		margin: 0px;
+		font-size: 2rem;
+	}
+	.statistics__subtitles {
+		margin: 0.6rem;
+		font-size: 1.3rem;
+		max-width: 45ch;
+	}
+	.statistic-cards {
+		position: relative;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--primary);
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+		gap: 7rem;
+		width: 0.6rem;
+
+		@media screen and (min-width: 1027px) {
+			font-size: 0.9rem;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			height: 0.6rem;
+			width: 100%;
+			gap: 3rem;
+			.statistic {
+				min-width: auto;
+			}
+			@for $i from 2 through 3 {
+				> :nth-child(#{$i}) {
+					top: $i * 1rem;
+				}
+			}
+		}
+	}
+
+	.statistic {
+		position: relative;
+		padding: 3rem 1rem 1rem 1rem;
+		border-radius: 0.4rem;
+		background-color: var(--white);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-height: 375px;
+		min-width: 90vw;
+		img {
+			// $imgHeight: 88px;
+			position: absolute;
+			top: -77%;
+
+			// top: -$imgHeight/2;
+			// border-radius: 50%;
+			// padding: 2rem;
+			// background: var(--dark-violet);
+		}
+		h3 {
+			font-size: 1.6em;
+		}
+		p {
+			font-size: 1.3em;
+		}
+	}
+}
