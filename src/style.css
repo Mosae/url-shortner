@@ -625,7 +625,7 @@ header .container .border-bottom {
 	font-size: 1.3em;
 }
 
-.boost {
+/* .boost {
 	position: relative;
 	background: var(--dark-violet);
 	color: #fff;
@@ -686,7 +686,7 @@ header .container .border-bottom {
 		right: 0px;
 		z-index: 1;
 	}
-}
+} */
 
 .footer {
 	background: var(--main-black);
