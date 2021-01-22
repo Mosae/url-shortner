@@ -12,13 +12,13 @@ function Boost() {
 				alt="background"
 				className="desktop__background"
 				aria-hidden="true"
-			/> */}
+			/>
 			<img
 				src={bgBoostMobile}
 				alt="background"
 				className="mobile__background"
 				aria-hidden="true"
-			/>
+			/> */}
 			<div className="container">
 				<h2>Boost your links today</h2>
 				<Button
