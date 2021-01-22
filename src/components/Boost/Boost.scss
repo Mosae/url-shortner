@@ -7,7 +7,7 @@
 
 .boosts {
 	position: relative;
-	background: green;
+	background: hsl(257, 27%, 26%);
 	color: #fff;
 	//width: 100px;
 }
@@ -22,18 +22,9 @@
 
 .boosts .container {
 	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	gap: 2rem;
 	min-height: 300px;
@@ -41,7 +32,7 @@
 }
 
 .boosts .container h2 {
-	font-size: 1.5rem;
+	font-size: 2.5rem !important;
 }
 
 .boosts .desktop__background {
@@ -55,10 +46,10 @@
 	.boosts .container h2 {
 		font-size: 2.5rem;
 	}
-	.boosts .mobile__background {
+	.mobile__background {
 		display: none;
 	}
-	.boosts .desktop__background {
+	.desktop__background {
 		display: block;
 		position: absolute;
 		top: 0;

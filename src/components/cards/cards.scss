@@ -1,6 +1,6 @@
 .statistics {
 	padding: 6rem 0rem 8rem 0rem;
-	background: var(--very-light-gray);
+	background: hsl(0, 0%, 75%);
 	.container {
 		display: grid;
 		grid-gap: 6rem;
@@ -26,7 +26,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--primary);
+		background-color: hsl(180, 66%, 49%);
 		margin-top: 10rem;
 		margin-bottom: 10rem;
 		gap: 7rem;
@@ -55,7 +55,7 @@
 		position: relative;
 		padding: 3rem 1rem 1rem 1rem;
 		border-radius: 0.4rem;
-		background-color: var(--white);
+		background-color: white;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -71,7 +71,7 @@
 			// top: -$imgHeight/2;
 			border-radius: 50%;
 			padding: 1rem;
-			background: var(--dark-violet);
+			background: hsl(257, 27%, 26%);
 		}
 		h3 {
 			font-size: 1.6em;
