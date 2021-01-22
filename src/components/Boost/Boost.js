@@ -7,12 +7,12 @@ import './Boost.scss';
 function Boost() {
 	return (
 		<section className="boosts">
-			<img
+			{/* <img
 				src={bgBoostDesktop}
 				alt="background"
 				className="desktop__background"
 				aria-hidden="true"
-			/>
+			/> */}
 			<img
 				src={bgBoostMobile}
 				alt="background"
