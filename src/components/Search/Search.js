@@ -62,9 +62,7 @@ const Result = ({ link, i }) => {
 		<div className="return_result" key={i}>
 			<h3 className="result__heading">{link['shortLink']}</h3>
 			<div className="result">
-				<a href={link['shortLink']} className="result__url">
-					{/* {link['shortLink']} */}
-				</a>
+				<a href={link['shortLink']} className="result__url"></a>
 				<button id="btn" className="secondary-btn" onClick={copyToClipboard}>
 					<span className="copy">Copy</span>
 					<span className="copied">Copied!</span>
