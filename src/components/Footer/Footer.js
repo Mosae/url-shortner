@@ -1,16 +1,27 @@
 import React from 'react';
 import './Footer.css';
+import { FaGithub } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 function Footer() {
 	return (
 		<div className="footer__items">
 			<div className="footer__heading">
-				<h2>Shortly</h2>
+				<nav>
+					<h2>Shortly by Mosae Litsoane</h2>
+					<div className="footer__subheading">
+						<a href="https://www.linkedin.com/in/mosae-litsoane/" target="_blank" rel="noopener noreferrer">
+							<FaLinkedin />
+						</a>
+						<a href="https://github.com/Mosae" target="_blank" rel="noopener noreferrer">
+							<FaGithub />
+						</a>
+						<a href="https://twitter.com/Mosae_Litsoane" target="_blank" rel="noopener noreferrer">
+							<FaTwitter />
+						</a>
+					</div>
+				</nav>
 			</div>
-			<nav className="footer__subheading">
-				<h6>Features</h6>
-				<h6>Resources</h6>
-				<h6>Company</h6>
-			</nav>
 		</div>
 	);
 }
