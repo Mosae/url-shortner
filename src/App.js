@@ -5,7 +5,6 @@ import Cards from './components/Cards/Card';
 import Boost from './components/Boost/Boost';
 import Footer from './components/Footer/Footer';
 import './style.css';
-// import Advanced from './components/Advanced';
 
 function App() {
 	return (
