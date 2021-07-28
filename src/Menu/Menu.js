@@ -6,19 +6,14 @@ import Button from '@material-ui/core/Button';
 import './Menu.css';
 
 export default function Menu() {
-	//const classes = useStyles();
-
 	return (
 		<div className="header">
 			<Toolbar>
-				<div className="header__ul">
-					<div className="header__logo">
-						<img src={logo} alt="Shortly" />
-					</div>
-					{/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton> */}
-					<div className="header__nav">
+				<div className="header__logo">
+					<img src={logo} alt="Shortly" />
+				</div>
+				<div className="header__ul invisible md:visible">
+					<div className="header__nav ">
 						<Typography variant="h6" className="menu__items">
 							Features
 						</Typography>
@@ -30,7 +25,7 @@ export default function Menu() {
 						</Typography>
 					</div>
 				</div>
-				<div className="header__login">
+				<div className="header__login invisible md:visible">
 					<Button color="inherit">Login</Button>
 					<Button variant="contained" color="primary">
 						Sign Up

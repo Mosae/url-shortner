@@ -1,11 +1,14 @@
-.header__login {
+/* .header {
+	margin: 2% 5% 2% 5%;
+} */
+/* .header__login {
 	display: flex;
 	justify-content: space-between;
-}
-.header__nav {
+} */
+/* .header__nav {
 	display: flex;
 	justify-content: space-between;
-}
+} */
 
 .header__intro {
 	display: flex;
@@ -13,7 +16,7 @@
 	justify-content: space-between;
 }
 .header__intro > h1 {
-	font-size: 68px;
+	font-size: 168px;
 }
 .header__intro > button {
 	background-color: #2bcdc5;
@@ -28,11 +31,5 @@
 }
 .get__started__button {
 	background-color: aqua !important;
-	border-radius: 50px !important;
-	margin: 10px;
-	width: 150px;
-}
-img {
-	width: 100%;
-	max-width: 600px;
+	/* border-radius: 50px; */
 }

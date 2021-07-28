@@ -6,18 +6,15 @@ function Header() {
 	return (
 		<div className="header__intro">
 			<div className="header__info">
-				<h1>
+				<h3 className="font-bold text-5xl sm:text-3xl">
 					More than just <br />
 					shorter links
-				</h1>
-				<h2>
+				</h3>
+				<h2 className="mb-3">
 					Build your brand's recoginition and get detailed <br />
 					insights on how your links are performing.
 				</h2>
-				<Button
-					variant="contained"
-					color="primary"
-					className="get__started__button">
+				<Button variant="contained" color="primary" class="get__started__button  mr-4 text-white p-3 w-40 rounded-3xl">
 					Get Started
 				</Button>
 			</div>
