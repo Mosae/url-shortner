@@ -1,5 +1,5 @@
 import Menu from './Menu/Menu';
-import Header from './components/Header/Header';
+import Header from './components/Hero/Header';
 import Search from './components/Search/Search';
 import Cards from './components/Cards/Card';
 import Boost from './components/Boost/Boost';
