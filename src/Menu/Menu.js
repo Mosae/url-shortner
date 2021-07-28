@@ -3,6 +3,7 @@ import logo from '../images/logo.svg';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import MobileMenu from '../components/MobileMenu/MobileMenu';
 import './Menu.css';
 
 export default function Menu() {
@@ -30,6 +31,7 @@ export default function Menu() {
 					<Button variant="contained" color="primary">
 						Sign Up
 					</Button>
+					{/* <MobileMenu /> */}
 				</div>
 			</Toolbar>
 		</div>
