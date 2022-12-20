@@ -72,6 +72,7 @@ ul {
 @media screen and (min-width: 1027px) {
 	.statistics .statistic-cards {
 		font-size: 0.9rem;
+		max-width: 1100px;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: row;
